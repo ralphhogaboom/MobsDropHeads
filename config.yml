@@ -1,0 +1,15 @@
+# Enabled Mobs
+Skeleton: true
+Zombie: true
+Creeper: true
+Wither Skeleton: false
+Player: true
+# Drop Chances
+# 1 out of...
+Skeleton Drop Chance: 10
+Zombie Drop Chance: 10
+Creeper Drop Chance: 10
+Wither Skeleton Drop Chance: 20
+Player Drop Chance: 1
+# Mobs have to be killed with a stone, iron, gold, or diamond sword to drop their head
+Heads Require Swords: true

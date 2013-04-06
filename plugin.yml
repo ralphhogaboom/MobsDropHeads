@@ -1,0 +1,13 @@
+name: Mobs Drop Heads
+author: Oppzippy
+main: com.Oppzippy.MobsDropHeads.MobsDropHeads
+version: 1.3
+description: >
+             Hostile mobs now drop their head.
+commands:
+  mobsdropheads:
+    description: Mobs Drop Heads commands.
+  mdh:
+    description: Mobs Drop Heads commands.
+  heads:
+    description: Mobs Drop Heads commands.
