@@ -88,6 +88,6 @@ public class MobsDropHeads extends JavaPlugin {
 
 	private void configNotOK() {
 		logger.severe(getDescription().getName()
-				+ " config file is missing values!  The plugin will not run correctly and will cause errors.  Please delete your config file and type the command mobsdropheads reload.");
+				+ " config file is missing values!  The plugin will not run correctly and will cause errors.  Please delete your config file and type the command \"mobsdropheads reload.\"");
 	}
 }

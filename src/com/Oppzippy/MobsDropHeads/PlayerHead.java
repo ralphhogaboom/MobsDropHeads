@@ -24,7 +24,9 @@ public class PlayerHead {
 		return skull;
 
 		/*
-		 * Some old code net.minecraft.server.v1_5_R2.ItemStack itemStack =
+		 * Some old code
+		 * 
+		 * net.minecraft.server.v1_5_R2.ItemStack itemStack =
 		 * org.bukkit.craftbukkit.v1_5_R2.inventory.CraftItemStack
 		 * .asNMSCopy(skull); net.minecraft.server.v1_5_R2.NBTTagCompound tag =
 		 * itemStack.tag; tag = new

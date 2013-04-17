@@ -30,23 +30,23 @@ public class DeathDropChanger extends MobsDropHeads implements Listener {
 				// Zombie
 				if (e.equals(EntityType.ZOMBIE)
 						&& MobsDropHeads.config.getBoolean("Zombie")
-						&& rnd.nextInt(MobsDropHeads.config
-								.getInt("Zombie Drop Chance")) + 1 == 1) {
+						&& tryDrop(MobsDropHeads.config
+								.getInt("Zombie Drop Chance"))) {
 					event.getDrops().add(MobHead.ZOMBIE.getItemStack());
 				}
 				// Skeleton
 				else if (e.equals(EntityType.SKELETON)
 						&& !Skeleton.isWither(event.getEntity())
 						&& MobsDropHeads.config.getBoolean("Skeleton")
-						&& rnd.nextInt(MobsDropHeads.config
-								.getInt("Skeleton Drop Chance")) + 1 == 1) {
+						&& tryDrop(MobsDropHeads.config
+								.getInt("Skeleton Drop Chance"))) {
 					event.getDrops().add(MobHead.SKELETON.getItemStack());
 				}
 				// Creeper
 				else if (e.equals(EntityType.CREEPER)
 						&& MobsDropHeads.config.getBoolean("Creeper")
-						&& rnd.nextInt(MobsDropHeads.config
-								.getInt("Creeper Drop Chance")) + 1 == 1) {
+						&& tryDrop(MobsDropHeads.config
+								.getInt("Creeper Drop Chance"))) {
 					event.getDrops().add(MobHead.CREEPER.getItemStack());
 				}
 				// Wither Skeleton
@@ -58,8 +58,8 @@ public class DeathDropChanger extends MobsDropHeads implements Listener {
 								MobHead.WITHER_SKELETON.getItemStack()))
 							event.getDrops().remove(
 									MobHead.WITHER_SKELETON.getItemStack());
-						if (rnd.nextInt(MobsDropHeads.config
-								.getInt("Wither Skeleton Drop Chance")) + 1 == 1)
+						if (tryDrop(MobsDropHeads.config
+								.getInt("Wither Skeleton Drop Chance")))
 							event.getDrops().add(
 									MobHead.WITHER_SKELETON.getItemStack());
 					}
@@ -81,12 +81,23 @@ public class DeathDropChanger extends MobsDropHeads implements Listener {
 					|| itemInHand == Material.IRON_SWORD
 					|| itemInHand == Material.DIAMOND_SWORD || itemInHand == Material.GOLD_SWORD)
 					|| (MobsDropHeads.config.getBoolean("Heads Require Swords") == false)) {
-				if (rnd.nextInt((int) MobsDropHeads.config
-						.getInt("Player Drop Chance")) + 1 == 1
+				if (tryDrop((int) MobsDropHeads.config
+						.getInt("Player Drop Chance"))
 						&& (boolean) MobsDropHeads.config.getBoolean("Player")) {
 					event.getDrops().add(PlayerHead.NameHead(p.getName()));
 				}
 			}
 		}
+	}
+
+	/**
+	 * Used for random chance of dropping heads
+	 * 
+	 * @param chance
+	 *            Percentage chance of returning true
+	 * @return Chance of being true, otherwise false
+	 */
+	private boolean tryDrop(int chance) {
+		return rnd.nextInt(99) + 1 <= chance;
 	}
 }
