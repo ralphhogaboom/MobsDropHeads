@@ -5,6 +5,22 @@
 Skeleton: true
 Zombie: true
 Creeper: true
+Blaze: true
+Cave Spider: true
+Chicken: true
+Cow: true
+Enderman: true
+Ghast: true
+Magma Cube: true
+Mooshroom: true
+Pig: true
+Zombie Pigman: true
+Sheep: false
+Slime: true
+Spider: true
+Squid: true
+Villager: true
+Iron Golem: true
 Wither Skeleton: false
 Player: true
 #
@@ -14,7 +30,23 @@ Player: true
 Skeleton Drop Chance: 10
 Zombie Drop Chance: 10
 Creeper Drop Chance: 10
-Wither Skeleton Drop Chance: 4
+Blaze Drop Chance: 25
+Cave Spider Drop Chance: 10
+Chicken Drop Chance: 5
+Cow Drop Chance: 10
+Enderman Drop Chance: 10
+Ghast Drop Chance: 100
+Magma Cube Drop Chance: 10
+Mooshroom Drop Chance: 10
+Pig Drop Chance: 50
+Zombie Pigman Drop Chance: 10
+Sheep Drop Chance: 10
+Slime Drop Chance: 10
+Spider Drop Chance: 10
+Squid Drop Chance: 20
+Villager Drop Chance: 25
+Iron Golem Drop Chance: 100
+Wither Skeleton Drop Chance: 5
 Player Drop Chance: 100
 #
 # Mobs have to be killed with a stone, iron, gold, or diamond sword to drop their head

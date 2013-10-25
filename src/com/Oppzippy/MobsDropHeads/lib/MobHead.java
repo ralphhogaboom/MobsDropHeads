@@ -1,13 +1,17 @@
-package com.Oppzippy.MobsDropHeads;
+package com.Oppzippy.MobsDropHeads.lib;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 public enum MobHead {
-	CREEPER("Creeper Head", (byte) 4), SKELETON("Skeleton Skull", (byte) 0), WITHER_SKELETON(
-			"Wither Skeleton Skull", (byte) 1), ZOMBIE("Zombie Head", (byte) 2);
+	CREEPER("Creeper Head", (byte)4), SKELETON("Skeleton Skull", (byte)0),
+	WITHER_SKELETON("Wither Skeleton Skull", (byte)1), ZOMBIE("Zombie Head",
+			(byte)2);
+
 	String SkullName;
+
 	byte SkullData;
+
 	ItemStack item;
 
 	private MobHead(String name, Byte data) {
