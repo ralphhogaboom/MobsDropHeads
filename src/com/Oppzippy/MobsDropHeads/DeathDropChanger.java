@@ -25,14 +25,13 @@ public class DeathDropChanger implements Listener {
 				|| event.getEntityType().equals(EntityType.PLAYER))
 			return;
 		// Checks to be sure there was a killer
-		if (event.getEntity().getKiller() != null) {
+		if (event.getEntity().getKiller() != null
+				|| MobsDropHeads.config.getBoolean("Ignore Killer")) {
 			Material itemInHand =
 					event.getEntity().getKiller().getItemInHand().getType();
 			// Heads require sword in hand
-			if ((itemInHand == Material.STONE_SWORD
-					|| itemInHand == Material.IRON_SWORD
-					|| itemInHand == Material.DIAMOND_SWORD || itemInHand == Material.GOLD_SWORD)
-					|| (MobsDropHeads.config.getBoolean("Heads Require Swords") == false)) {
+			if (MobsDropHeads.killedUsing.contains(itemInHand.toString())
+					|| MobsDropHeads.config.getBoolean("Requires Item") == false) {
 				EntityType e = event.getEntity().getType();
 				if (e.equals(EntityType.SKELETON)
 						&& Skeleton.isWither(event.getEntity())
@@ -106,6 +105,6 @@ public class DeathDropChanger implements Listener {
 	 * @return Chance of being true, otherwise false
 	 */
 	private boolean tryDrop(int chance) {
-		return rnd.nextInt(99) + 1 <= chance;
+		return rnd.nextInt(100) + 1 <= chance;
 	}
 }

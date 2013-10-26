@@ -49,6 +49,13 @@ Iron Golem Drop Chance: 100
 Wither Skeleton Drop Chance: 5
 Player Drop Chance: 100
 #
-# Mobs have to be killed with a stone, iron, gold, or diamond sword to drop their head
+# A mob must be killed with a specific item in order for them to drop their head.
+# Separate items using ","
+# Example: "Killed Using: DIAMOND_SWORD,DIRT" will require the living entity to be killed with a Diamond Sword or a dirt block in the player's hand.
 #
-Heads Require Swords: true
+Requires Item: true
+Killed Using: STONE_SWORD,IRON_SWORD,GOLD_SWORD,DIAMOND_SWORD
+#
+# Should a head still have a chance of dropping even if the mob isn't killed by a player?
+#
+Ignore Killer: false

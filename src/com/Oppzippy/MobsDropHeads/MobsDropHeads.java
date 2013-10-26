@@ -1,5 +1,6 @@
 package com.Oppzippy.MobsDropHeads;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -19,6 +20,8 @@ public class MobsDropHeads extends JavaPlugin {
 
 	public static HashMap<String, Integer> dropChance =
 			new HashMap<String, Integer>();
+
+	public static ArrayList<String> killedUsing = new ArrayList<String>();
 
 	public void onDisable() {}
 
@@ -110,6 +113,11 @@ public class MobsDropHeads extends JavaPlugin {
 					config.getInt("Iron Golem Drop Chance"));
 		if (config.getBoolean("Player"))
 			dropChance.put("PLAYER", config.getInt("Player Drop Chance"));
+		
+		killedUsing.clear();
+		String[] items = config.getString("Killed Using").toUpperCase().split(",");
+		for(String i : items)
+			killedUsing.add(i.trim());
 		logger.info("Reloaded Mobs Drop Heads configuration file.");
 	}
 }
