@@ -16,7 +16,7 @@ Mooshroom: true
 Pig: true
 Ocelot: true
 Zombie Pigman: true
-Sheep: false
+Sheep: true
 Slime: true
 Spider: true
 Squid: true
@@ -31,7 +31,7 @@ Player: true
 Skeleton Drop Chance: 10
 Zombie Drop Chance: 10
 Creeper Drop Chance: 10
-Blaze Drop Chance: 25
+Blaze Drop Chance: 15
 Cave Spider Drop Chance: 10
 Chicken Drop Chance: 5
 Cow Drop Chance: 10
@@ -40,7 +40,7 @@ Ghast Drop Chance: 100
 Magma Cube Drop Chance: 10
 Mooshroom Drop Chance: 10
 Ocelot Drop Chance: 10
-Pig Drop Chance: 50
+Pig Drop Chance: 10
 Zombie Pigman Drop Chance: 10
 Sheep Drop Chance: 10
 Slime Drop Chance: 10
