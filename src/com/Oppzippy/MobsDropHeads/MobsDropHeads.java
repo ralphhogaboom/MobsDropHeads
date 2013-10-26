@@ -24,13 +24,13 @@ public class MobsDropHeads extends JavaPlugin {
 	public static ArrayList<String> killedUsing = new ArrayList<String>();
 
 	public void onDisable() {}
-
+	
 	public void onEnable() {
 		reloadConfiguration();
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new DeathDropChanger(), this);
 	}
-
+	
 	public boolean onCommand(CommandSender sender, Command cmd, String command,
 			String[] args) {
 		if (command.equalsIgnoreCase("mobsdropheads")
@@ -62,7 +62,9 @@ public class MobsDropHeads extends JavaPlugin {
 		}
 		return true;
 	}
-
+	/**
+	 * Reloads the configuration file and puts all values into their ArrayLists or HashMaps.
+	 */
 	private void reloadConfiguration() {
 		logger.info("Reloading Mobs Drop Heads configuration file.");
 		saveDefaultConfig();

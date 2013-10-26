@@ -32,6 +32,11 @@ public enum PlayerMobHead {
 		this.playerName = playerName;
 	}
 	
+	/**
+	 * Creates an ItemStack for the head.
+	 * @return The created ItemStack for this head
+	 */
+	
 	public ItemStack getItemStack(){
 		ItemStack head = PlayerHead.nameHead(playerName);
 		ItemMeta headMeta = head.getItemMeta();
@@ -40,9 +45,19 @@ public enum PlayerMobHead {
 		return head;
 	}
 	
+	/**
+	 * The display name is the name shown in-game upon mousing over the item.
+	 * @return Display name of the head
+	 */
+	
 	public String getDisplayName(){
 		return displayName;
 	}
+	
+	/**
+	 * Returns the player's name who owns the skin that is being used.
+	 * @return SkullOwner
+	 */
 	
 	public String getMHFName(){
 		return playerName;
