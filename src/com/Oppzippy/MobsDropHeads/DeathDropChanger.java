@@ -24,13 +24,15 @@ public class DeathDropChanger implements Listener {
 		if (!event.getEntityType().isAlive()
 				|| event.getEntityType().equals(EntityType.PLAYER))
 			return;
+		boolean ignore = MobsDropHeads.config.getBoolean("Ignore Killer");
 		// Checks to be sure there was a killer
-		if (event.getEntity().getKiller() != null
-				|| MobsDropHeads.config.getBoolean("Ignore Killer")) {
-			Material itemInHand =
-					event.getEntity().getKiller().getItemInHand().getType();
+		if (event.getEntity().getKiller() != null || ignore) {
+			Material itemInHand = null;
+			if (!ignore)
+				itemInHand =
+						event.getEntity().getKiller().getItemInHand().getType();
 			// Heads require sword in hand
-			if (MobsDropHeads.killedUsing.contains(itemInHand.toString())
+			if (ignore || MobsDropHeads.killedUsing.contains(itemInHand.toString())
 					|| MobsDropHeads.config.getBoolean("Requires Item") == false) {
 				EntityType e = event.getEntity().getType();
 				if (e.equals(EntityType.SKELETON)
@@ -61,8 +63,8 @@ public class DeathDropChanger implements Listener {
 									MobHead.SKELETON.getItemStack());
 							return;
 						} else if (e.equals(EntityType.CREEPER)) {
-							event.getDrops().add(
-									MobHead.SKELETON.getItemStack());
+							event.getDrops()
+									.add(MobHead.CREEPER.getItemStack());
 							return;
 						}
 						PlayerMobHead pmHead =

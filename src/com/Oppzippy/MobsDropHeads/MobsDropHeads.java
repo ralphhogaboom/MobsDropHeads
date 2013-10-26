@@ -40,13 +40,13 @@ public class MobsDropHeads extends JavaPlugin {
 				if (args.length == 0) {
 					((Player)sender).sendMessage("Mobs Drop Heads commands:");
 					((Player)sender).sendMessage("/" + command
-							+ " reload - Reloads config file");
+							+ " reload - Reloads configuration file");
 				}
 				if (args.length >= 1 && sender.isOp()
 						&& args[0].equalsIgnoreCase("reload")) {
 					reloadConfiguration();
 					((Player)sender)
-							.sendMessage("Reloading Mobs Drop Heads config file.");
+							.sendMessage("Reloading Mobs Drop Heads configuration file.");
 				}
 			} else {
 				if (args.length == 0) {
@@ -95,6 +95,8 @@ public class MobsDropHeads extends JavaPlugin {
 		if (config.getBoolean("Mooshroom"))
 			dropChance.put("MUSHROOM_COW",
 					config.getInt("Mooshroom Drop Chance"));
+		if (config.getBoolean("Ocelot"))
+			dropChance.put("OCELOT", config.getInt("Ocelot Drop Chance"));
 		if (config.getBoolean("Pig"))
 			dropChance.put("PIG", config.getInt("Pig Drop Chance"));
 		if (config.getBoolean("Zombie Pigman"))

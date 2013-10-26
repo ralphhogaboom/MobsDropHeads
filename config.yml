@@ -14,6 +14,7 @@ Ghast: true
 Magma Cube: true
 Mooshroom: true
 Pig: true
+Ocelot: true
 Zombie Pigman: true
 Sheep: false
 Slime: true
@@ -38,6 +39,7 @@ Enderman Drop Chance: 10
 Ghast Drop Chance: 100
 Magma Cube Drop Chance: 10
 Mooshroom Drop Chance: 10
+Ocelot Drop Chance: 10
 Pig Drop Chance: 50
 Zombie Pigman Drop Chance: 10
 Sheep Drop Chance: 10
